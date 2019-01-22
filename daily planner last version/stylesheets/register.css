@@ -1,0 +1,15 @@
+/* REGISTER PAGE CSS */
+/* make the input validation message green if data is correct */
+#register-page .form-success,
+/* make the input fields green if their contents is correct */
+#register-page input.ng-valid-pattern,
+#register-page input.ng-valid-required {
+  color: green;
+}
+
+/* make the input validation message red if data is incorrect */
+#register-page .form-error,
+/* make the input fields red if their contents is incorrect */
+#register-page input.ng-invalid {
+  color: red;
+}

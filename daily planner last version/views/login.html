@@ -1,0 +1,32 @@
+<div id="login-page" ng-controller="LoginController as login">
+	
+	
+	<form ng-submit="CheckLogin()" name="loginForm">
+		<h3 class="text-center" > login</h3>
+		<br>
+		 <h4 class="text-center"> Please fill the details below:</h4>
+		 <br>
+			<div class="form-group">
+		<label>Username: </label>
+		<input class="form-control" ng-model="username" name="uName" required minlength="4">
+		<!-- ng-show="expression_or_condition" => shows the element it's attached to if the expression_or_condition is TRUE -->
+		<div class="form-error" ng-show="loginForm.uName.$error.minlength">You need to enter at least 4 characters!</div>
+		<div class="form-success" ng-show="loginForm.uName.$valid">Correct!</div>
+		</div>
+		
+			<div class="form-group">
+		<label>Password: </label>
+		<!-- Regex patterns: http://www.regular-expressions.info/index.html -->
+		<input  class="form-control" type="password" ng-model="password" name="uPass" required pattern="([a-zA-Z0-9]){4,16}">
+		<!-- ng-show="expression_or_condition" => shows the element it's attached to if the expression_or_condition is TRUE -->
+		<div class="form-error" ng-show="loginForm.uPass.$error.pattern">You can only enter between 4 and 16 alphanumeric characters!</div>
+		<div class="form-success" ng-show="loginForm.uPass.$valid">Correct!</div>
+		</div>
+		<div class="form-group text-center">
+		<input   class="btn btn-primary " type="submit" value="Submit">
+		</div>
+	</form>
+	
+	<div>{{ message }}</div>
+	
+</div>

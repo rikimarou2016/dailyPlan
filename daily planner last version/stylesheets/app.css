@@ -1,0 +1,15 @@
+/* APP WIDE CSS */
+
+body {
+  background-color: #ccddff;
+}
+p {
+  font-size: 24px;
+}
+
+input {
+  border: solid 1px black;
+}
+
+
+

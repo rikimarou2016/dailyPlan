@@ -1,0 +1,47 @@
+<div id="viewMySchedule-page" ng-controller="viewMyScheduleController as dsb">
+
+	
+	<h3>Hello, {{ user.username }} !! </h3>
+	<h3> {{ activity.Date }} </h3>
+<br>
+<br>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5 col-md-4 col-lg-8">
+        <!--digital clock-->
+        <div id="clockDisplay" class="clockStyle">
+          {{ myClock | date:'mediumTime' }}
+        </div>
+      </div>
+       <div class="col-xs-4 col-md-8">
+<div id="liveclock" class="outer_face">
+
+  <div class="marker oneseven"></div>
+  <div class="marker twoeight"></div>
+  <div class="marker fourten"></div>
+  <div class="marker fiveeleven"></div>
+
+  <div class="inner_face">
+    <div class="hand hour"></div>
+    <div class="hand minute"></div>
+    <div class="hand second"></div>
+  </div>
+  </div>
+     
+       <div class="row">
+      <div class="col-xs-4 col-md-8">
+        <div id="calendar">
+          <p id="calendar-day">{{ calendar | date:'EEEE' }}</p>
+          <p id="calendar-date">{{ calendar | date:'d MMM' }}</p>
+          <p id="calendar-month-year">{{ calendar | date:'yyyy' }}</p>
+        </div>
+        </div>
+      
+    </div>
+  </div>
+  </div>
+
+
+  </div>
+
+</div>

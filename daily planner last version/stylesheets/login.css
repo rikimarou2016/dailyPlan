@@ -1,0 +1,15 @@
+/* LOGIN PAGE CSS */
+/* make the input validation message green if data is correct */
+#login-page .form-success,
+/* make the input fields green if their contents is correct */
+#login-page input.ng-valid-pattern,
+#login-page input.ng-valid-required {
+  color: green;
+}
+
+/* make the input validation message red if data is incorrect */
+#login-page .form-error,
+/* make the input fields red if their contents is incorrect */
+#login-page input.ng-invalid {
+  color: red;
+}
